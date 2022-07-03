@@ -26,7 +26,7 @@ const NavLinks = () => {
         )}
         {!isLoggedIn && (
           <li className="li-register">
-            <Link to="/register">Register</Link>
+            <Link to="/register">Regístrate</Link>
           </li>
         )}
         {isLoggedIn && user === "usuario" && (

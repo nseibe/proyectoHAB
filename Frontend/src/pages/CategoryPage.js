@@ -24,22 +24,31 @@ const CategoryPage = () => {
 
   let catImage;
   let altDesc;
+  let descCat;
   switch (idCat) {
     case "1":
       catImage = bienestarImage;
       altDesc = "hand over water";
+      descCat =
+        "¿Qué te apetece hoy? Si estás pensando en un masaje relajante, una sesión de yoga u otra de ejercicio que suba tus pulsaciones... Busca entre las opciones que te ofrecemos y encontrarás aquella que se adapate a lo que tienes en mente.";
       break;
     case "2":
       catImage = gastronomiaImage;
       altDesc = "some fruits and vegetables";
+      descCat =
+        "Para aprender a cocinar esos platos que tanto te gustan, para reservar mesa en los restaurantes más cool... Aquí encontrarás todo eso y más.";
       break;
     case "3":
       catImage = velocidadImage;
       altDesc = "speedometer";
+      descCat =
+        "Coches, helicópteros, globos... Elige el medio de transporte y aquí lo encontrarás.";
       break;
     case "4":
       catImage = aventuraImage;
       altDesc = "four people in a hiking route";
+      descCat =
+        "¿Buscas plan? Apúntate a alguna de nuestras aventuras: playa, montaña, río... Encontrarás lo que buscas.";
       break;
 
     default:
@@ -125,16 +134,7 @@ const CategoryPage = () => {
       </div>
       <div className="description-category">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut
-          tellus erat. Phasellus eu metus nibh. Nullam efficitur, lacus at
-          venenatis tristique, urna purus tempus massa, a vestibulum turpis
-          tellus in justo. Duis tincidunt metus a ipsum euismod placerat. In
-          consequat aliquet augue ac euismod. Proin semper libero eget lacinia
-          tristique. Integer sed sem a justo commodo egestas. Phasellus et
-          congue eros, at mattis nunc. Donec tempor tortor non massa rutrum
-          condimentum. Vivamus et rhoncus mauris. Aenean tellus lacus, lobortis
-          ut ante non, sodales auctor tellus. Ut ut libero lectus. Curabitur ut
-          mattis lacus. Suspendisse at sodales libero.
+          {descCat}
         </p>
       </div>
       <p className="next-exp">Próximas experiencias en {nameCat}:</p>
@@ -145,7 +145,7 @@ const CategoryPage = () => {
       <div>
         <ReviewList reviews={reviews} />
       </div>
-      <Button to="/search">BUSCAR MÁS</Button>
+      <Button to="/search">BUSCAR MÁS EXPERIENCIAS</Button>
     </>
   );
 };

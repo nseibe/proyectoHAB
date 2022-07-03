@@ -135,6 +135,13 @@ const ExperiencePage = () => {
                   </div>
                   <div className="exp-reviews-data">
                     <p className="light-text">{rev.userName}</p>
+                    <ReactStars
+                      value={+rev.rating}
+                      count={5}
+                      size={24}
+                      activeColor="#ffd700"
+                      edit={false}
+                    />
                     <p>{rev.comment}</p>
                   </div>
                 </li>
